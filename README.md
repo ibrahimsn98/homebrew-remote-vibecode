@@ -6,7 +6,7 @@ Homebrew tap for [remote-vibecode](https://github.com/ibrahim/remote-vibecode) -
 
 ```bash
 # Add the tap
-brew tap ibrahim/homebrew-remote-vibecode
+brew tap ibrahimsn98/homebrew-remote-vibecode
 
 # Install remote-vibecode
 brew install remote-vibecode

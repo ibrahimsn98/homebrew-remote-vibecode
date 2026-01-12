@@ -1,7 +1,7 @@
 class RemoteVibecode < Formula
   desc "Tmux Terminal Sharing Service - View and interact with tmux sessions in real-time"
-  homepage "https://github.com/ibrahim/remote-vibecode"
-  url "https://github.com/ibrahim/remote-vibecode/archive/refs/tags/v1.0.0.tar.gz"
+  homepage "https://github.com/ibrahimsn98/remote-vibecode"
+  url "https://github.com/ibrahimsn98/remote-vibecode/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "SHA256_PLACEHOLDER"
   license "MIT"
 

@@ -3,7 +3,7 @@
 ## 1. Create and push a tag
 
 ```bash
-cd /Users/ibrahim/Lab/claude-plugin
+cd /Users/ibrahimsn98/Lab/claude-plugin
 git tag v1.0.0
 git push origin v1.0.0
 ```
@@ -34,7 +34,7 @@ Replace `SHA256_PLACEHOLDER` in `Formula/remote-vibecode.rb` with the actual SHA
 ## 5. Commit and push tap changes
 
 ```bash
-cd /Users/ibrahim/Lab/homebrew-remote-vibecode
+cd /Users/ibrahimsn98/Lab/homebrew-remote-vibecode
 git add Formula/remote-vibecode.rb
 git commit -m "Update remote-vibecode to v1.0.0"
 git push origin main
@@ -43,7 +43,7 @@ git push origin main
 ## 6. Test Installation
 
 ```bash
-brew tap ibrahim/homebrew-remote-vibecode
+brew tap ibrahimsn98/homebrew-remote-vibecode
 brew install remote-vibecode
 brew services start remote-vibecode
 ```

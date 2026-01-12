@@ -9,12 +9,13 @@ class RemoteVibecode < Formula
   depends_on "tmux" => :runtime
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.Version=#{version}"), "./service/cmd/server"
-    (var/"log").mkdir
+    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"remote-vibecode-server"), "./service/cmd/server"
+    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"vibecode"), "./service/cmd/vibecode"
+    (var/"log").mkpath
   end
 
   service do
-    run [opt_bin/"server"]
+    run [opt_bin/"remote-vibecode-server"]
     keep_alive true
     log_path var/"log/server.log"
     error_log_path var/"log/server.error.log"
@@ -26,7 +27,7 @@ class RemoteVibecode < Formula
     port = free_port
     ENV["PORT"] = port.to_s
     fork do
-      exec bin/"server"
+      exec bin/"remote-vibecode-server"
     end
     sleep 2
     assert_match "OK", shell_output("curl -s http://localhost:#{port}/api/v1/health")

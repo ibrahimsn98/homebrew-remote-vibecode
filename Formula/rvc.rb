@@ -1,4 +1,4 @@
-class Rv < Formula
+class Rvc < Formula
   desc "Tmux Terminal Sharing Service - View and interact with tmux sessions in real-time"
   homepage "https://github.com/ibrahimsn98/remote-vibecode"
   url "https://github.com/ibrahimsn98/remote-vibecode/archive/refs/tags/v1.0.1.tar.gz"
@@ -9,13 +9,13 @@ class Rv < Formula
   depends_on "tmux" => :runtime
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"rv"), "./service/cmd/vibecode"
+    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"rvc"), "./service/cmd/vibecode"
   end
 
   test do
     port = free_port
     fork do
-      exec bin/"rv", "serve", "--port", port.to_s
+      exec bin/"rvc", "serve", "--port", port.to_s
     end
     sleep 2
     assert_match "OK", shell_output("curl -s http://localhost:#{port}/api/v1/health")

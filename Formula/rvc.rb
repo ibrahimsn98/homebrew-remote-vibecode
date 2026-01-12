@@ -1,8 +1,8 @@
 class Rvc < Formula
   desc "Tmux Terminal Sharing Service - View and interact with tmux sessions in real-time"
   homepage "https://github.com/ibrahimsn98/remote-vibecode"
-  url "https://github.com/ibrahimsn98/remote-vibecode/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "e488fbf8537c76b4e6db2241955f8db8184fc558b309fccd5d29e8afbbe6e632"
+  url "https://github.com/ibrahimsn98/remote-vibecode/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "0b04007653c41904fb31bfdc88d969d14cdc9036118cbc35a2f90ab70f106c0e"
   license "MIT"
 
   depends_on "go" => :build
